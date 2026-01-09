@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+#Problem: 1
 @app.route("/calculate", methods=["POST"])
 def calculate():
     data = request.get_json()
@@ -37,6 +38,7 @@ def calculate():
 
     return jsonify({"result": result}), 200
 
+#Problem: 2
 @app.route("/search", methods=["GET"])
 def search():
     query = request.args.get("q")
